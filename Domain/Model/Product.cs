@@ -1,9 +1,12 @@
-﻿namespace DotnetShoppingApi.Domain.Model;
+using DotnetShoppingApi.Domain.Enum;
 
-public class Product
+namespace DotnetShoppingApi.Domain.Model
 {
-    public string Name { get; set; } = null!;
-    public decimal Price { get; set; }
-    public int Stock { get; set; }
-    public int MinimumAge { get; set; }
+    public class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = null!;
+        public ProductCategory Category { get; set; }
+        // ... other product properties
+    }
 }

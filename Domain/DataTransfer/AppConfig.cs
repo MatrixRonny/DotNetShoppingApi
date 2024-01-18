@@ -7,7 +7,9 @@ namespace DotnetShoppingApi.Domain.DataTransfer
 
     public class JwtConfig
     {
-        public string Issuer { get; set; } = null!;
-        public string Key { get; set; } = null!;
+        public string TokenIssuer { get; set; } = null!;
+        public string TokenKey { get; set; } = null!;
+        public TimeSpan TokenExpiration { get; set; } = TimeSpan.FromHours(2);
+        public string TokenAudience { get; set; } = "defaultAudience";
     }
 }

@@ -35,9 +35,9 @@ void InitializeServices()
                 ValidateAudience = true,
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
-                ValidIssuer = appConfig.Jwt.Issuer,
-                ValidAudience = appConfig.Jwt.Issuer,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appConfig.Jwt.Key))
+                ValidIssuer = appConfig.Jwt.TokenIssuer,
+                ValidAudience = appConfig.Jwt.TokenIssuer,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appConfig.Jwt.TokenKey)) // Corrected property name
             };
         });
 
